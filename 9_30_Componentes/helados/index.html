@@ -1,0 +1,30 @@
+<!doctype html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+          
+
+    </head>
+    <body>
+        <div id="app">
+            
+             
+               <h1> Helados </h1>
+               <h2> Lista </h2>
+               <ul>
+                  <li v-for="item in helados"> 
+                     <component-helado v-bind:helado="item"></component-helado> 
+                  </li> 
+               </ul> 
+               <h2> Seleccionados </h2>
+               <ul>
+                  <li v-for="item in helados" v-if="item.seleccionado"> {{ item.sabor }} </li> 
+               </ul> 
+              
+        </div>
+          <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script src="app.js"></script>
+    </body>
+</html>

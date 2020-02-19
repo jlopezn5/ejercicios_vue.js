@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1> Videojuegos Disponibles (click en uno para comprarlo) </h1>
+	<main>
+		<ul>
+			<li v-on:click="comprarJuego(juego,index)" 
+				v-for="(juego,index) in juegosEnAlmacen">{{ juego.titulo }} - Existencias: {{ juego.existencias }}</li>
+		</ul>
+		Nombre del Juego: <input type="text" v-model="juegoNuevo" v-on:keyup.enter="anadeJuego">	
+		Existencias:<input type="number" v-model="cantidad" placeholder="5" style="width: 35px">
+		<input type="button" value="Añadir" v-on:click="anadeJuego">
+		<br><br>
+		<input type="button" value="Restaurar" v-on:click="restaurarJuegos">		
+		<p>- Al darle a restaurar tendrán que volver a aparecer todos los juegos eliminados<br>
+		y además todos los juegos volverán a tener las existencias iniciales con las que se crearon.</p><p>- Además no se podrán añadir juegos con el nombre vacío</p>
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

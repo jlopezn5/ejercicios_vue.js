@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	 crossorigin="anonymous">
+
+
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<div id="app" class="row">
+		<div class="col-md-6 col-md-offset-3">
+
+			<template v-if="nombre">
+				<h1>
+					{{ sexo == 'chico' ? 'Bienvenido' : 'Bienvenida' }}, {{ nombre }}, eres {{ sexo }}
+				</h1>
+				<p>Espero que disfrutes tu visita</p>
+				<p>Tu nombre al revés es: {{ reves() }}
+			</template>
+			<h1 v-else>Por favor escribe tu nombre:</h1>
+			<form>  
+				<input type="text" v-model="nombre" class="form-control">
+
+				<p v-if="nombre == ''" class="alert alert-danger">
+					Este campo es obligatorio
+				</p>
+				<p v-if="nombre.length < 3" class="alert alert-danger">
+					El nombre debe tener más de dos caracteres
+				</p>
+				<div v-if="nombre">
+					<h2>Seleccione sexo:</h2>
+					<input type="radio" value="chico" v-model="sexo">Masculino<br>
+					<input type="radio" value="chica" v-model="sexo">Femenino<br>
+				
+				</div>
+
+			</form>  
+	
+
+			
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>

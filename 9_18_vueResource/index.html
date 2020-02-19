@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<meta charset="utf-8">
+	<style>
+		
+	</style>
+</head>
+<body align="center"> 
+	<h1> Listado de Personas (https://randomuser.me/api/?results=10) </h1>
+	<main>
+		<table border=1 width="50%" align="center">
+			<tr>
+				<td>Foto</td><td>Nombre</td><td>Apellido</td><td>Teléfono</td>
+			</tr>
+			<tr v-for="persona in personas">
+				<td><img :src=" persona.picture.thumbnail"
+					:alt="persona.name.first"></td>
+				<td>{{ persona.name.first}}</td>
+				<td>{{ persona.name.last}}</td>
+				<td>{{ persona.phone }}</td>
+
+			</tr>
+		</table>
+		
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

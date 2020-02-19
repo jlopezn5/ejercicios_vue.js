@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<meta charset="utf-8">
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<main>
+		<elegir-ganador :listado="personas"></elegir-ganador>
+	</main>
+	<template id="elegir-ganador-template">
+		<div>
+			<template v-if="fin==false">
+				<h1>Listado de participantes</h1>
+				<ul>
+					<li v-for="persona in listado">{{ persona }}</li>
+				</ul>
+
+				<button @click="elegirGanador">Elegir un nuevo ganador aleatorio</button>
+			</template>
+			<h1 v-if="ganador">Los ganadores son: </h1>
+			<ol>
+				<li v-for="g in ganadores" v-text="g"></li>
+			</ol>
+
+
+		</div>
+	</template>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

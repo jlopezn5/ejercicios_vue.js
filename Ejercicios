@@ -1,0 +1,27 @@
+Ejercicios Vue.js
+
+1. Crea una etiqueta h1 y otra h2 asociadas a una caja de texto, de tal forma que al escribir un texto sobre la caja de texto, automáticamente se vea en las etiquetas h1 y h2 aprovechando la reactividad de Vue.js
+
+2. Haz este mismo ejercicio en jQuery y valora las diferencias
+
+3. Crea una página con un input de tipo rango con valor mínimo 1 y valor máximo 100. En función del valor seleccionado por el usuario, aparecerá en la parte de abajo una etiqueta h1 con una de las siguientes opciones:
+	- niño si el menor de 12
+	- adolescente entre 12 y 18
+	- mayor de edad entre 18 y 65
+	- tercera edad si es mayor de 65
+Sólamente debe aparecer una de esas etiquetas a la vez.
+Nota. utiliza las directivas (v-if v-else-if y v-else )
+
+4. (filtros) Crea una lista con los siguientes juegos:
+	- Spider-Man, disponible
+	- FIFA 2019, disponible
+	- Fortnite, disponible
+	- Red Dead Redemption 2, disponible
+	- Call of Duty: Black Ops 4, disponible
+	- Destiny 2, disponible
+
+	Inicialmente, todos los juegos están disponibles en la tienda física que hemos montado, y por eso aparecerán en el listado inicial. Según los clientes vayan comprando 
+
+5. Utilizando las librerías animated.css junto con vue.js, tendrás que crear una página que contenga un botón y un elemento h2 que muestre el texto "animaciones con vue.js y animated.css". La animación de entrada será "bounceInUp" y la de salida "fadeOutLeft".
+
+5. 

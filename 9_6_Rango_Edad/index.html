@@ -1,0 +1,24 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+        	<title></title>
+        	<meta charset="utf-8">
+            <style>
+                body {
+                    font-family: arial;
+                }
+            </style>
+        </head>
+        <body> 
+        	<main>
+                <h1>Seleccione su edad</h1>
+                <input v-model="edad" type="range" min="1" max="120"><span v-text="edad"></span>
+                <h2 v-if="edad<12">Eres un niño</h2>
+                <h2 v-else-if="edad<18">Eres un adolescente</h2>
+                <h2 v-else-if="edad<65">Eres un hombre</h2>
+                <h2 v-else>Eres una persona mayor</h2>
+        	</main>
+        	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+        	<script type="text/javascript" src="main.js"></script>
+        </body>
+        </html>

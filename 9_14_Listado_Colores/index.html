@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	 crossorigin="anonymous">
+
+	
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<div id="app">
+		<h1>Lista de Colores</h1>	
+		 <ol>
+		 	<li v-for="color in colores">
+		 		<span v-bind:style="{color:color.valorHexadec}">{{ "El color "+color.nombreColor+" tiene el siguiente valor hexadecimal:"+color.valorHexadec }}</span>
+		 	</li>
+		 </ol>
+		
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>

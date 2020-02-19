@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	 crossorigin="anonymous">
+
+
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<div id="app">
+		<h1>Lista de colores</h1>
+		<ul>
+			<li v-for="(color,index) in Colores">
+				<span v-bind:style="{color:color.valorHexadec}">
+					{{ index+1 }}. El color {{ color.nombreColor }} tiene el siguiente valor hexadecimal: {{ color.valorHexadec }}
+				</span>
+			</li>
+		</ul>
+		<br><br>
+		<p>Nombre de color: <input type="text" v-model="nombreColor"></p>
+		<p>Valor hexadecimal: <input type="text" v-model="valorHexadec"></p>
+		<button v-on:click="anadeColor">Añadir Color</button>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+
+	<script src="main.js"></script>
+</body>
+
+</html>

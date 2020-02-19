@@ -1,0 +1,29 @@
+            <!DOCTYPE html>
+            <html>
+            <head>
+            	<title></title>
+            	<meta charset="utf-8">
+                <style>
+                    body {
+                        font-family: arial;
+                        }
+                    #caja {
+                            background-color: pink;
+                            width: 500px;
+                            height: 520px;
+                            margin-left: 50px;
+                            margin-top: 50px;
+                        }
+                </style>
+            </head>
+            <body> 
+            	<main>
+     <h2 style="position: absolute; top:0px; left:80px">Saltos: {{ cont }}</h2>
+    <div id="caja">
+        <img v-bind:style="{position: 'absolute', left: izq + 'px', top: arriba + 'px'}" src="raton.png" width="100" @mouseover="mover">
+    </div>
+            	</main>
+            	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+            	<script type="text/javascript" src="main.js"></script>
+            </body>
+            </html>

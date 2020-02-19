@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	 crossorigin="anonymous">
+
+	
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<div id="app">
+		<button class="btn btn-info"
+				:style="{'font-size': tamanyo+'px',width:'260px'}">
+				{{ nombre }}</button>
+		<br>
+		<img src="persona.jpg" :title="nombre">
+		<br>
+		<br>
+		<button @click="asignarNombre()" class="btn btn-primary">Genera un nombre para el personaje</button>
+		<br><br>
+		Tamaño del nombre: 
+		<button class="btn" @click="tamanyo++">+</button>
+		<button class="btn" @click="tamanyo--" v-bind:disabled="tamanyo<10">-</button>
+		<pre>
+			{{ $data }}
+		</pre>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
